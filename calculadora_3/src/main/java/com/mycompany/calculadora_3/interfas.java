@@ -456,12 +456,13 @@ String texto;
     }//GEN-LAST:event_bpotActionPerformed
 
     private void braizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_braizActionPerformed
-        operaciones op=new operaciones();
+       operaciones op=new operaciones();
         String texto;
         texto=receptortexto.getText();
-        num1=Double.parseDouble(texto);
-        aclaraciones.setText(num1+"√"+"(");
+        num2=Double.parseDouble(texto);
+        aclaraciones.setText(texto+"√(");
         receptortexto.setText("");
+        op(num1, num2, op1);
         op1=6;
         
     }//GEN-LAST:event_braizActionPerformed
@@ -561,10 +562,11 @@ String texto;
                 num1=resultado;
                 break;
             case 6://raiz
-                resultado=op.potencia(num1, num2);
+                 resultado=op.raiz(num1, num2);
                 aclaraciones.setText(String.valueOf(resultado));
                 receptortexto.setText("");
                 num1=resultado;
+                break;
             case 7://sin
               resultado=op.sin(num2);
               aclaraciones.setText(String.valueOf(resultado));

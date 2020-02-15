@@ -29,7 +29,7 @@ public class operaciones {
   }
   public double raiz(double num1,double num2)
   {
-      n3=Math.pow(num1,1/num2);
+       n3=Math.pow(num2,1/num1);
       return n3;
   }
   public double sin(double num2)
